@@ -1,0 +1,216 @@
+:root {
+  --VeryDarkMagenta: hsl(300, 43%, 22%);
+  --SoftPink: hsl(333, 80%, 67%);
+  --DarkGrayishMagenta: hsl(303, 10%, 53%);
+  --LightGrayishMagenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Spartan', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("../images/bg-pattern-bottom-mobile.svg") bottom right no-repeat, url("../images/bg-pattern-top-mobile.svg") top left no-repeat;
+  background-size: 100% 503px, auto auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: var(--VeryDarkMagenta);
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.15rem;
+  line-height: 2.4rem;
+  text-align: center;
+  margin: 2rem auto 2rem auto;
+}
+
+.headline {
+  font-weight: 700;
+  color: var(--DarkGrayishMagenta);
+  margin: 1.5rem auto 2.5rem auto;
+  line-height: 1.8rem;
+  text-align: center;
+}
+
+.review {
+  background-color: var(--LightGrayishMagenta);
+  border-radius: 0.5rem;
+  display: flex;
+  font-size: 0.8rem;
+  ;
+  flex-direction: column;
+  margin: 1.2rem auto;
+  max-width: 480px;
+  padding: 1rem 0.5rem;
+  text-align: center;
+}
+
+.review p {
+  color: var(--VeryDarkMagenta);
+  font-weight: 700;
+  margin-top: 0.5rem;
+  white-space: nowrap;
+}
+
+.review img {
+  height: 1.2rem;
+  margin: 0 0.2rem;
+}
+
+.rating {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.comments {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  gap: 1.6rem;
+  margin: 1.5rem 0;
+}
+
+.comment {
+  background-color: var(--VeryDarkMagenta);
+  border-radius: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 380px;
+  padding: 2rem;
+}
+
+.comment img {
+  border-radius: 50%;
+  float: left;
+  height: 3rem;
+  margin: 0 2rem 2rem 0;
+}
+
+.comment h2 {
+  color: var(--LightGrayishMagenta);
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.comment .author-desc {
+  color: var(--SoftPink);
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+.comment .message {
+  clear: left;
+  color: var(--LightGrayishMagenta);
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  text-align: left;
+}
+
+@media screen and (min-width: 920px) {
+  body {
+    background: url("../images/bg-pattern-bottom-desktop.svg") bottom right no-repeat, url("../images/bg-pattern-top-desktop.svg") top left no-repeat;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 3rem 4% 0 4%;
+  }
+  .hero {
+    margin: 0;
+    max-width: 480px;
+    text-align: left;
+  }
+  .hero h1 {
+    text-align: left;
+    margin-left: 0;
+    margin-bottom: 0.2rem;
+    max-width: 380px;
+  }
+  .hero p {
+    margin-left: 0;
+    margin-top: 0.2rem;
+    text-align: left;
+  }
+  .comments {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .reviews {
+    align-content: center;
+    align-self: flex-end;
+    display: grid;
+    justify-items: center;
+    margin: 2rem auto 0 auto;
+    max-width: 580px;
+    padding: 0 5rem;
+    width: 100%;
+  }
+  .review {
+    flex-direction: row;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 480px;
+  }
+  .review:nth-child(1) {
+    justify-self: start;
+    margin-right: 2rem;
+  }
+  .review:nth-child(3) {
+    justify-self: end;
+    margin-left: 2rem;
+  }
+  .review p {
+    padding-left: 2rem;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .reviews {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  body {
+    padding: 2rem 10% 0 10%;
+  }
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 0;
+  }
+  .comment:nth-child(1) {
+    margin-bottom: 2rem;
+  }
+  .comment:nth-child(2) {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  .comment:nth-child(3) {
+    margin-top: 2rem;
+  }
+}
